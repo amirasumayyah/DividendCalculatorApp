@@ -23,7 +23,7 @@ public class AboutActivity extends AppCompatActivity {
 
         TextView githubLink = findViewById(R.id.githubLink);
         githubLink.setOnClickListener(v -> {
-            String url = "https://github.com/amirasumayyah/DividendCalculatorApp"; // Replace with your GitHub URL
+            String url = "https://github.com/amirasumayyah/DividendCalculatorApp";
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse(url));
             startActivity(intent);
