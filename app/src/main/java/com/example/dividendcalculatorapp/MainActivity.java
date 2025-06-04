@@ -1,6 +1,7 @@
 package com.example.dividendcalculatorapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
                     if (Month > 12) {
                         Result1.setText("Maximum 12 months only.");
+                        Result1.setTextColor(Color.RED);
+                        Result2.setVisibility(View.GONE);
                         return;
                     }
 
@@ -56,11 +59,14 @@ public class MainActivity extends AppCompatActivity {
                     double totalDividend = MonthlyDividend * Month;
 
                     Result1.setText(String.format("Montly Dividend: RM %.2f", MonthlyDividend));
+                    Result1.setTextColor(Color.BLACK);
                     Result2.setText(String.format("Total Dividend: RM %.2f", totalDividend));
+                    Result2.setVisibility(View.VISIBLE);
 
                 } catch (NumberFormatException e) {
                     Result1.setText("Please fill in all fields correctly.");
-                    Result2.setText("Please fill in all fields correctly.");
+                    Result1.setTextColor(Color.RED);
+                    Result2.setVisibility(View.GONE);
                 }
             }
         });
