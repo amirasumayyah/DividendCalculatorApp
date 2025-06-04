@@ -60,4 +60,23 @@
         app:layout_constraintVertical_bias="0.156"
         app:srcCompat="@drawable/logodividendcalc" />
 
+    <TextView
+        android:id="@+id/githubLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="256dp"
+        android:autoLink="web"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="View GitHub Repository"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Copyright"
+        app:layout_constraintVertical_bias="0.349" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
